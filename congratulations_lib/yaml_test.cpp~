@@ -1,7 +1,7 @@
 #include <yaml-cpp/yaml.h>
 #include <iostream>
 #include <string>
-#define SETTINGS_FILE "/opt/Qt5.1.1/Tools/QtCreator/bin/congratulations_lib/config.yaml"
+#define SETTINGS_FILE "config.yaml"
 class Test {
 YAML::Node config;
 public:
@@ -12,8 +12,7 @@ void print() {
          //std::cout << iter->first.as<std::string>() << std::endl ;
          YAML::const_iterator iter2=iter->second.begin();
          ++iter2;
-         for ( 
-              ;iter2 !=iter->second.end(); ++iter2) {
+         for (;iter2 !=iter->second.end(); ++iter2) {
               
               //std::cout << (iter2->second)["type"].as<std::string>() <<' ';
               YAML::Node values = (iter2->second)["values"];

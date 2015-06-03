@@ -1,7 +1,7 @@
 #include <yaml-cpp/yaml.h>
 #include <iostream>
 #include <string>
-#define SETTINGS_FILE "/home/vladislav/CPP_project/congr0/congratulations_lib/config.yaml"
+#define SETTINGS_FILE "config.yaml"
 class Test {
 YAML::Node config;
 public:
@@ -12,8 +12,7 @@ void print() {
          //std::cout << iter->first.as<std::string>() << std::endl ;
          YAML::const_iterator iter2=iter->second.begin();
          ++iter2;
-         for ( 
-              ;iter2 !=iter->second.end(); ++iter2) {
+         for (;iter2 !=iter->second.end(); ++iter2) {
               
               //std::cout << (iter2->second)["type"].as<std::string>() <<' ';
               YAML::Node values = (iter2->second)["values"];
@@ -31,7 +30,6 @@ void print() {
 
 int main() {
     Test test;
-    test.print();
-    
+    test.print();    
     return 0;
 }
