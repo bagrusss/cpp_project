@@ -1,0 +1,59 @@
+settings-groups:
+  general-settings:
+    when-congratulate:
+      title: Как часто поздравлять
+      values: [half-an-hour, hour, four-hours]
+      type: radio-button
+      selected-value-index: 1
+    how:
+      title: Как поздравлять
+      values: [В личку, На стену]
+      type: radio-button
+      selected-value-index: 0
+    who:
+      selected-value-index: 0
+      values: [Всех, Никого]
+      type: radio-button
+      title: Кого поздравлять
+    when-update:
+      type: radio-button
+      title: Как часто обновлять
+      values: [one-day, six-hours, hour]
+      selected-value-index: 0
+    group-title:
+      title: Общие
+      type: header
+  system-settings:
+    where:
+      title: Работать в фоне
+      is-on: false
+      type: switcher
+    group-title:
+      type: header
+      title: Системные
+friends-url: https://api.vk.com/method/friends.get?uid=user-id&access_token=access-token&fields=uid,first_name,last_name,bdate,photo
+time-dictionary:
+  half-an-hour:
+    title: Раз в полчаса
+    number: 1800000
+  four-hours:
+    number: 14400000
+    title: Раз в 4 часа
+  six-hours:
+    title: Раз в 6 часов
+    number: 21600000
+  hour:
+    number: 3600000
+    title: Раз в час
+  one-day:
+    title: Раз в сутки
+    number: 86400000
+auth-url: https://oauth.vk.com/authorize?client_id=4903979&scope=friends,offline,wall,messages&redirect_uri=http://oauth.vk.com/blank.html&display=popup&response_type=token
+send-message-url: https://api.vk.com/method/messages.send?user_id=user-id&message=template-message&access_token=access-token
+template-auth-url: https://oauth.vk.com/blank.html
+db-file: ../Database.sqlite
+post-wall-url: https://api.vk.com/method/wall.post?owner_id=user-id&message=template-message&access_token=access-token
+img-path: ../images/
+date-format: yyyy-M-d
+access-token: a0169cb5946ff911d99d005e55f399da4c80d4cd49b8732bdbf35ea569e52fd790c9e44bd1628addc2ac0
+user-id: 147234587

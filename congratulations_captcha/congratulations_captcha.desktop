@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Name=congratulations_captcha
+Exec=/opt/congratulations_captcha/bin/congratulations_captcha
+Icon=congratulations_captcha64
+X-Window-Icon=
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable

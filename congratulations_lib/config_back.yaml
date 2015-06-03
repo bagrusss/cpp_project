@@ -1,0 +1,54 @@
+settings-groups:
+    general-settings:
+       group-title: 
+         type: header
+         title: Общие
+       who:
+         type: radio-button
+         title: Кого поздравлять
+         values: [Всех, Никого]
+         selected-value-index: 0
+       how:
+         type: radio-button
+         title: Как поздравлять
+         values: [В личку, На стену]
+         selected-value-index: 0 
+       when-update:
+         type: radio-button
+         title: Как часто обновлять
+         values: [one-day, six-hours, hour]
+         selected-value-index: 1
+       when-congratulate:
+         type: radio-button
+         title: Как часто поздравлять
+         values: [half-an-hour, hour, four-hours ]
+         selected-value-index: 1
+    system-settings:
+       group-title: 
+         type: header
+         title: Системные
+       where:
+         type: switcher
+         title: Работать в фоне
+         is-on: true
+
+time-dictionary: 
+     one-day: 
+        title: Раз в сутки
+        number: 86400000
+      
+     six-hours: 
+        title: Раз в 6 часов
+        number: 21600000
+     
+     four-hours: 
+        title: Раз в 4 часа
+        number: 14400000
+     
+     hour: 
+        title: Раз в час
+        number: 3600000
+          
+     half-an-hour: 
+        title: Раз в полчаса
+        number: 1800000

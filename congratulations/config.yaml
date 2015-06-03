@@ -1,0 +1,63 @@
+settings-groups:
+  general-settings:
+    when-congratulate:
+      title: Как часто поздравлять
+      values: [half-an-hour, hour, four-hours]
+      type: radio-button
+      selected-value-index: 1
+    how:
+      title: Как поздравлять
+      values: [В личку, На стену]
+      type: radio-button
+      selected-value-index: 0
+    who:
+      selected-value-index: 0
+      values: [Всех, Никого]
+      type: radio-button
+      title: Кого поздравлять
+    when-update:
+      title: Как часто обновлять
+      type: radio-button
+      values: [one-day, six-hours, hour]
+      selected-value-index: 0
+    group-title:
+      title: Общие
+      type: header
+  system-settings:
+    where:
+      title: Работать в фоне
+      is-on: false
+      type: switcher
+    group-title:
+      type: header
+      title: Системные
+send-message-url: https://api.vk.com/method/messages.send?user_id=user-id&message=template-message&access_token=access-token
+time-dictionary:
+  four-hours:
+    title: Раз в 4 часа
+    number: 14400000
+  six-hours:
+    number: 21600000
+    title: Раз в 6 часов
+  half-an-hour:
+    title: Раз в полчаса
+    number: 1800000
+  hour:
+    number: 3600000
+    title: Раз в час
+  one-day:
+    title: Раз в сутки
+    number: 86400000
+img-path: ../images/
+friends-url: https://api.vk.com/method/friends.get?uid=user-id&access_token=access-token&fields=uid,first_name,last_name,bdate,photo
+date-format: yyyy-M-d
+auth-url: https://oauth.vk.com/authorize?client_id=4903979&scope=friends,offline,wall,messages&redirect_uri=http://oauth.vk.com/blank.html&display=popup&response_type=token
+daemon-program: ../daemon/daemon0
+db-file: ../Database.sqlite
+template-auth-url: https://oauth.vk.com/blank.html
+img-path-for-qml: ../../../images/
+post-wall-url: https://api.vk.com/method/wall.post?owner_id=user-id&message=template-message&access_token=access-token
+daemon-pid: 7308
+captcha-program: ../captcha/congratulations_captcha
+access-token: 11374eba37cc26c4db4739548a02d8dc2c4fc2fc429351cb12013c93f142809b835bc4ef8d0426655c523
+user-id: 147234587
