@@ -20,8 +20,7 @@ SOURCES += \
     dbmanagerhelpers.cpp \
     templatesdbmanager.cpp \
     friendsdbmanager.cpp \
-    bdaysdbmanager.cpp \
-    json.cpp
+    bdaysdbmanager.cpp
 
 HEADERS +=\
         congratulations_lib_global.h \
@@ -31,8 +30,7 @@ HEADERS +=\
     settingsheader.h \
     clearmemoryhelpers.h \
     sqlite/sqlite3ext.h \
-    sqlite/sqlite3.h \
-    json.h
+    sqlite/sqlite3.h
 
 unix:!symbian {
     maemo5 {

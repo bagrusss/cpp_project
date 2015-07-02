@@ -95,6 +95,8 @@ QMAKE_CXXFLAGS += -std=c++11 -fpermissive
 
 QDBUS_DEBUG = 1
 
+
+
 unix:!macx: LIBS += -L$$PWD/../congratulations/lib/ -lcongratulations_lib
 
 INCLUDEPATH += $$PWD/../congratulations/lib/include

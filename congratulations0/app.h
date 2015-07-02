@@ -14,22 +14,23 @@
 #include <QApplication>
 #include <QtDeclarative>
 
-
+// Одиночка
 class App: public QApplication
 {
 public:
-    App(int& argc, char * argv[]);
+    static App*& getInstance(int& argc, char * argv[]);
     ~App();
 
-    //инициализация моделей для вьюшек
-    //инициализация ApplicationViewer
-    //запуск event loop
+    /*инициализация моделей для вьюшек
+      инициализация ApplicationViewer
+      запуск event loop*/
     int startGUI();
 
 private:
+    App(int& argc, char * argv[]);
     //для взаимодействия по dbus с процессом демона
     DBusConnector* connector;
-
+    static App* instance;
 };
 
 #endif // APP_H

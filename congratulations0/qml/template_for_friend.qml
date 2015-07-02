@@ -371,9 +371,5 @@ Rectangle {
                 height: 100
             }
         }
-
-
     }
-
-
 }

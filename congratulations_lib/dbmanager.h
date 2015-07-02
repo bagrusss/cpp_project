@@ -47,9 +47,11 @@ public:
        deletedElements = 3
     } elementTypes;
 
+
     virtual ~DBManager() {
         DBManager::close();
     }
+
 
     //возвращает список всех элементов соответсвующей таблицы
     virtual QList<AbstractListEntry*>* getAllElements(int* state=nullptr) { return nullptr; }
@@ -145,6 +147,8 @@ private:
     BdaysDBManager() = default;
 
 };
+
+
 
 class CONGRATULATIONS_LIBSHARED_EXPORT FriendsDBManager: public  DBManager {
 public:

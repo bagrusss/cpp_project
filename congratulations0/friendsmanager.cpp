@@ -1,5 +1,7 @@
 #include "friendsmanager.h"
 
+
+
 FriendsManager::FriendsManager(TemplateIdTranslator* translator_, QObject *parent):
     Manager(FriendsDBManager::Instance(), parent), translator(translator_) {
     firstDisplayedElement = STATE_IS_NOT_SELECTED;

@@ -1,13 +1,20 @@
 #include "app.h"
 #include <QDebug>
 
-
-
 App::App(int& argc, char * argv[]): QApplication(argc, argv),
     connector(new DBusConnector(GUI_SERVICE_NAME,
                                 DBUS_OBJECT_NAME,
                                 DAEMON_SERVICE_NAME,
                                 DBUS_OBJECT_NAME)) {
+}
+
+App* App::instance = 0;
+
+static App*& App::getInstance(int& argc, char * argv[]) {
+    if (instance == 0){
+        instance = new App(argc, argv);
+    }
+    return instance;
 }
 
 App::~App() {
@@ -53,10 +60,8 @@ int App::startGUI() {
         QObject::connect(connector, SIGNAL(friendsInfoHasChanged()), &friendManager, SLOT(onDbaseInfoGetChanged()));
         QObject::connect(connector, SIGNAL(bdaysInfoHasChanged()), &bdayManager, SLOT(onDbaseInfoGetChanged()));
     }
-
     viewer.setMainQmlFile(QLatin1String("qml/congratulations0/main.qml"));
     viewer.showExpanded();
-
     return QApplication::exec();
 }
 

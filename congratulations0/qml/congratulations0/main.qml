@@ -9,7 +9,7 @@ Rectangle {
         id: mainloader;
         Component.onCompleted: {
             //console.log(AuthManager.wasAuthenticatedFlag)
-            if (AuthManager.wasAuthenticatedFlag == true) {
+            if (AuthManager.wasAuthenticatedFlag === true) {
                 mainloader.source = "AuthorizedMainView.qml"
             } else {
                 mainloader.source = "VkAuth.qml"

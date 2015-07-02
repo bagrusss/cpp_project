@@ -53,7 +53,6 @@ Item {
 
         }
 
-
         MouseArea {
             id: editAnonymousTemplate
             height: parent.height;

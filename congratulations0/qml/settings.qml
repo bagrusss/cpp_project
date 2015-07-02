@@ -259,9 +259,5 @@ Rectangle {
             height: 100
             source: "../src/settings_selected.png"
         }
-
-
     }
-
-
 }

@@ -1,0 +1,63 @@
+settings-groups:
+  general-settings:
+    when-congratulate:
+      title: Как часто поздравлять
+      values: [half-an-hour, hour, four-hours]
+      type: radio-button
+      selected-value-index: 0
+    how:
+      title: Как поздравлять
+      values: [В личку, На стену]
+      type: radio-button
+      selected-value-index: 0
+    who:
+      selected-value-index: 0
+      type: radio-button
+      values: [Всех, Никого]
+      title: Кого поздравлять
+    group-title:
+      title: Общие
+      type: header
+    when-update:
+      values: [one-day, six-hours, hour]
+      title: Как часто обновлять
+      type: radio-button
+      selected-value-index: 2
+  system-settings:
+    where:
+      is-on: true
+      title: Работать в фоне
+      type: switcher
+    group-title:
+      title: Системные
+      type: header
+daemon-program: ../daemon/daemon0
+access-token: 11374eba37cc26c4db4739548a02d8dc2c4fc2fc429351cb12013c93f142809b835bc4ef8d0426655c523
+auth-url: https://oauth.vk.com/authorize?client_id=4903979&scope=friends,offline,wall,messages&redirect_uri=http://oauth.vk.com/blank.html&display=popup&response_type=token
+user-id: 147234587
+db-file: ../Database.sqlite
+send-message-url: https://api.vk.com/method/messages.send?user_id=user-id&message=template-message&access_token=access-token
+post-wall-url: https://api.vk.com/method/wall.post?owner_id=user-id&message=template-message&access_token=access-token
+captcha-program: ../captcha/congratulations_captcha
+img-path-for-qml: ../../../images/
+friends-url: https://api.vk.com/method/friends.get?uid=user-id&access_token=access-token&fields=uid,first_name,last_name,bdate,photo
+date-format: yyyy-M-d
+time-dictionary:
+  one-day:
+    number: 86400000
+    title: Раз в сутки
+  half-an-hour:
+    title: Раз в полчаса
+    number: 1800000
+  four-hours:
+    title: Раз в 4 часа
+    number: 14400000
+  hour:
+    number: 3600000
+    title: Раз в час
+  six-hours:
+    title: Раз в 6 часов
+    number: 21600000
+img-path: ../images/
+daemon-pid: 7308
+template-auth-url: https://oauth.vk.com/blank.html

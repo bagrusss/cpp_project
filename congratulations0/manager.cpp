@@ -1,4 +1,4 @@
-#include "manager.h"
+            #include "manager.h"
 
 Manager::Manager(DBManager* manager, QObject *parent):
         QAbstractListModel(parent), dbManager(manager), listEntries(nullptr) {}

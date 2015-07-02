@@ -66,6 +66,4 @@ private:
     void saveChanges();
 };
 
-
-
 #endif // FRIENDSMANAGER_H
